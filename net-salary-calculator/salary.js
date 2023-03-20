@@ -3,6 +3,7 @@ function calculateNetSalary(){
     let benefits = parseFloat(document.getElementById("benefits").value);
     let grossSalary = basicSalary + benefits;
     let tax = 0;
+    //Calculate the tax
     if (grossSalary <= 24000) {
       tax = 0;
     } else if (grossSalary <= 40000) {
@@ -16,6 +17,7 @@ function calculateNetSalary(){
     } else {
       tax = 38400 + (grossSalary - 160000) * 0.35;
     }
+    //Calculate NHIF Deductions
  let nhifDeductions = 0;
  if (grossSalary <= 5999) {
    nhifDeductions = 150;
@@ -50,8 +52,11 @@ function calculateNetSalary(){
   } else {
     nhifDeductions = 1700;
   }
+  //NSSF Deductions
   let nssfDeductions = Math.min(grossSalary * 0.06, 2160);
+  //Net Salary
   let netSalary = grossSalary - tax - nhifDeductions - nssfDeductions;
+  //Output
   document.getElementById("grossSalary").innerHTML = `Gross Salary: KES ${grossSalary.toFixed(2)}`;
   document.getElementById("tax").innerHTML = `Payee (Tax): KES ${tax.toFixed(2)}`;
   document.getElementById("nhifDeductions").innerHTML = `NHIF Deductions: KES ${nhifDeductions.toFixed(2)}`;

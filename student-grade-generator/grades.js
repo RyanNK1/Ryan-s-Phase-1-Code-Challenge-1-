@@ -1,6 +1,7 @@
 function calculateGrade() {
     let marks = document.getElementById("marks").value;
     marks = Number(marks);
+    //Grade Calculation
 
     if (marks >= 0 && marks <= 100) {
       let grade;
@@ -15,6 +16,7 @@ function calculateGrade() {
       } else {
         grade = "E";
       }
+      //Output
       document.getElementById("result").innerHTML = `The student scored grade ${grade}.`;
     } else {
       document.getElementById("result").innerHTML = 'Marks should be between 0 and 100.';
