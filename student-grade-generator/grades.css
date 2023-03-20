@@ -1,0 +1,30 @@
+body {
+    background-color: burlywood;
+    font-family: Arial, sans-serif;   
+  }
+  .container {
+    color: beige;
+    width: 90%;
+  }
+  h1{
+    color: black;
+    text-align: center;
+  }
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 19px;
+  }
+  button {
+    background-color: #0b0c0b;
+    color: white;
+    padding: 12px 20px;   
+    float: left;
+  }
+  #result {
+    color: black;
+    margin-top: 20px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+  }
